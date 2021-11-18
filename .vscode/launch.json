@@ -30,12 +30,12 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "d:\\Project\\M1_Application_BankManagementSystem",
+      "cwd": "d:\\M1_MyFirst_project\\M1_Application_BankManagementSystem\\M1_Application_BankManagementSystem",
       "environment": [],
-      "program": "d:\\Project\\M1_Application_BankManagementSystem\\build\\Debug\\outDebug",
+      "program": "d:\\M1_MyFirst_project\\M1_Application_BankManagementSystem\\M1_Application_BankManagementSystem\\build\\Debug\\outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
       "externalConsole": false,
       "setupCommands": [
         {
