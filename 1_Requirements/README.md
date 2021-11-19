@@ -72,7 +72,7 @@ The mannually creating accounts, transactions, updating account and other applic
 | ------ | ------ | ------ |
 | Creation | You can create any bank account through this application | Future |
 | Transaction | Transaction can be done over any bank account | Future |
-| Security | Giving security for the particular user to access their account him/her-self | Future |
+| Security | Giving security for the particular user to access their account him/her-self by giving password | Future |
 ## Low level Requirements:
 
 | ID | Description | Status |
