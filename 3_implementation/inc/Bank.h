@@ -1,8 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<windows.h>
+#include <stdbool.h>
 int i,j;
 int main_exit;
+void menu();
+int atm();
+void close();
 struct date{
     int month,day,year;
 
@@ -44,7 +48,7 @@ void new_acc()
     ptr=fopen("record.dat","a+");
     account_no:
     system("cls");
-    printf("\t\t\t\xB2\xB2\xB2 ADD RECORD  \xB2\xB2\xB2\xB2");
+    printf("\t\t\t==== ADD RECORD  ====");
     printf("\n\n\nEnter today's date(mm/dd/yyyy):");
     scanf("%d/%d/%d",&add.deposit.month,&add.deposit.day,&add.deposit.year);
     printf("\nEnter the account number:");
@@ -488,17 +492,17 @@ void see(void)
 
 void close(void)
 {
-    printf("\n\n\n\n successfully Logged out!");
+    printf("\n\n\n\nBrought To You by code-projects.org");
     }
 
 
 void menu(void)
 {   int choice;
     system("cls");
-    system("color 9");
-    printf("\n\n\t\t\tCUSTOMER ACCOUNT BANKING MANAGEMENT SYSTEM");
+    system("color 7");
+    printf("\n\n\t\t\t       BANKING MANAGEMENT SYSTEM");
     printf("\n\n\n\t\t\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2 WELCOME TO THE MAIN MENU \xB2\xB2\xB2\xB2\xB2\xB2\xB2");
-    printf("\n\n\t\t1.Create new account\n\t\t2.Update information of existing account\n\t\t3.For transactions\n\t\t4.Check the details of existing account\n\t\t5.Removing existing account\n\t\t6.View customer's list\n\t\t7.Exit\n\n\n\n\n\t\t Enter your choice:");
+    printf("\n\n\t\t[1] Create a new account\n\t\t[2] Update information of existing account\n\t\t[3] Transactions\n\t\t[4] Check the details of existing account\n\t\t[5] Remove existing account\n\t\t[6] View customer's list\n\t\t[7] ATM Feature\n\t\t[8] Exit\n\n\n\t\t Enter your choice:");
     scanf("%d",&choice);
 
     system("cls");
@@ -516,11 +520,9 @@ void menu(void)
         break;
         case 6:view_list();
         break;
-        case 7:close();
+        case 7:atm();
         break;
-
+        case 8:close();
+        break;
     }
-
-
-
 }
