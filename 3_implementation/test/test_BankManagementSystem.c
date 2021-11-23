@@ -1,9 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<windows.h>
+#include <stdbool.h>
 int i,j;
 int main_exit;
 void menu();
+int atm();
+void close();
 struct date{
     int month,day,year;
 
@@ -45,7 +48,7 @@ void new_acc()
     ptr=fopen("record.dat","a+");
     account_no:
     system("cls");
-    printf("\t\t\t\xB2\xB2\xB2\ ADD RECORD  \xB2\xB2\xB2\xB2");
+    printf("\t\t\t==== ADD RECORD  ====");
     printf("\n\n\nEnter today's date(mm/dd/yyyy):");
     scanf("%d/%d/%d",&add.deposit.month,&add.deposit.day,&add.deposit.year);
     printf("\nEnter the account number:");
@@ -489,17 +492,17 @@ void see(void)
 
 void close(void)
 {
-    printf("\n\n\n\nThis C Mini Project is developed by Code With C team!");
+    printf("\n\n\n\nBrought To You by code-projects.org");
     }
 
 
 void menu(void)
 {   int choice;
     system("cls");
-    system("color 9");
-    printf("\n\n\t\t\tCUSTOMER ACCOUNT BANKING MANAGEMENT SYSTEM");
+    system("color 7");
+    printf("\n\n\t\t\t       BANKING MANAGEMENT SYSTEM");
     printf("\n\n\n\t\t\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2 WELCOME TO THE MAIN MENU \xB2\xB2\xB2\xB2\xB2\xB2\xB2");
-    printf("\n\n\t\t1.Create new account\n\t\t2.Update information of existing account\n\t\t3.For transactions\n\t\t4.Check the details of existing account\n\t\t5.Removing existing account\n\t\t6.View customer's list\n\t\t7.Exit\n\n\n\n\n\t\t Enter your choice:");
+    printf("\n\n\t\t[1] Create a new account\n\t\t[2] Update information of existing account\n\t\t[3] Transactions\n\t\t[4] Check the details of existing account\n\t\t[5] Remove existing account\n\t\t[6] View customer's list\n\t\t[7] ATM Feature\n\t\t[8] Exit\n\n\n\t\t Enter your choice:");
     scanf("%d",&choice);
 
     system("cls");
@@ -517,9 +520,10 @@ void menu(void)
         break;
         case 6:view_list();
         break;
-        case 7:close();
+        case 7:atm();
         break;
-
+        case 8:close();
+        break;
     }
 
 
@@ -527,9 +531,10 @@ void menu(void)
 }
 int main()
 {
-    char pass[10],password[10]="codewithc";
+    char pass[10],password[10]="pass";
     int i=0;
-    printf("\n\n\t\tEnter the password to login:");
+    printf("\n\n\n\t\t\t\t   Bank Management System\n\t\t\t\t\t User Login ");
+    printf("\n\n\n\n\n\t\t\t\tEnter the password to login:");
     scanf("%s",pass);
     /*do
     {
@@ -546,9 +551,12 @@ int main()
         for(i=0;i<=6;i++)
         {
             fordelay(100000000);
-            printf(".");
+            printf(". ");
         }
-                system("cls");
+        printf("\n");
+                system("pause");
+				system("cls");
+                
             menu();
         }
     else
@@ -576,3 +584,187 @@ int main()
         }
         return 0;
 }
+
+//ATM FEATURE - nsb code-projects
+int atm(){
+	//Functions
+
+void mainMenu();
+void checkBalance(float balance);
+float moneyDeposit(float balance);
+float moneyWithdraw(float balance);
+void menuExit();
+void errorMessage();
+
+int login(void)
+{
+  float number = 1234;
+  int pass;
+  printf("\n\n\t\t\tEnter the PIN No:");
+  scanf("%d", &pass);
+
+  if (pass == number)
+    {
+      printf("\n\nPIN Matched!\nLOADING");
+        for(i=0;i<=6;i++)
+        {
+            fordelay(100000000);
+            printf(".");
+        }
+        system("cls");
+      mainMenu();
+    }
+  else
+    {
+      printf("Invalid\n Try Again");
+      login();
+    }
+  return 0;
+}
+
+
+//Main Code
+	    //Local Declarations
+    int option;
+    float balance = 15000.00;
+    int choose;
+    bool again = true;
+    
+    // insert code here...
+    login();
+    while (again) {
+    
+    
+    
+    printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
+    printf("Your Selection:\t");
+    scanf("%d", &option);
+     system("CLS"); 
+    
+        switch (option) {
+            case 1:
+                checkBalance(balance);
+                break;
+            case 2:
+                balance = moneyDeposit(balance);
+                break;
+            case 3:
+                balance = moneyWithdraw(balance);
+                break;
+            
+            case 4:
+                menuExit();
+                return 0;
+                
+            default:
+                errorMessage();
+                break;
+        }
+       
+        printf("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n");
+        printf("Would you like to do another transaction:\n");
+        printf("< 1 > Yes\n");
+        printf("< 2 > No\n");
+        scanf("%d", &choose);
+         system("CLS"); 
+        
+        
+        
+        if (choose == 2) {
+            again = false;
+            menuExit();
+           
+        }else{
+        	mainMenu();
+		}
+       
+}
+
+    
+    return 0;
+    
+}//main code
+
+
+
+//Functions
+
+void mainMenu() {
+    
+    printf("\n\n\t\t==========Welcome to ATM Feature==========\n\n");
+    printf("\n\t\t----Please choose one of the options below----\n");
+    printf("\n\t\t< 1 >  Check Balance\n");
+    printf("\n\t\t< 2 >  Deposit\n");
+    printf("\n\t\t< 3 >  Withdraw\n");
+    printf("\n\t\t< 4 >  Exit\n\n");
+    
+}//Main Menu
+
+void checkBalance(float balance) {
+    printf("You Choose to See your Balance\n");
+    printf("****Your Available Balance is:   $%.2f\n\n", balance);
+    
+}//Check Balance
+
+float moneyDeposit(float balance) {
+    float deposit;
+    printf("You choose to Deposit a money\n");
+    printf("$$$$Your Balance is: $%.2f\n\n", balance);
+    printf("****Enter your amount to Deposit\n");
+    scanf("%f", &deposit);
+    
+    
+    balance += deposit;
+    
+    printf("****Your New Balance is:   $%.2f\n\n", balance);
+    return balance;
+   
+    
+}//money deposit
+
+float moneyWithdraw(float balance) {
+    float withdraw;
+    bool back = true;
+    
+    printf("You choose to Withdraw a money\n");
+    printf("$$$$Your Balance is: $%.2f\n\n", balance);
+    
+    while (back) {
+    printf("Enter your amount to withdraw:\n");
+    scanf("%f", &withdraw);
+    
+    
+    if (withdraw < balance) {
+        back = false;
+        balance -= withdraw;
+        printf("$$$$Your withdrawing money is:  $%.2f\n", withdraw);
+        printf("****Your New Balance is:   $%.2f\n\n", balance);
+        
+    }
+    
+        else  {
+        
+        printf("+++You don't have enough money+++\n");
+        printf("Please contact to your Bank Customer Services\n");
+        printf("****Your Balance is:   $%.2f\n\n", balance);
+    
+    }
+    }
+    return balance;
+    
+    
+}//money withdraw
+
+void menuExit() {
+    printf("--------------Take your receipt!!!------------------\n");
+    printf("-----Thank you for using ATM Banking Machine!!!-----\n");
+    printf("-----      Brought To by code-projects.org      -----\n");
+    
+    
+}//exit menu
+
+void errorMessage() {;
+    printf("+++!!!You selected invalid number!!!+++\n");
+}
+
+
