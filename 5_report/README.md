@@ -147,3 +147,5 @@ BANK MANAGEMENT SYSTEM undertaken as a project is based on relevant technologies
  [![Linux OS Build](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/Build_linux.yml/badge.svg)](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/Build_linux.yml)
 
  [![Git Inspector](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/git_inspector.yml/badge.svg)](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/git_inspector.yml)
+
+[![Windows OS Build](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/Windows-c.cpp.yml/badge.svg)](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/Windows-c.cpp.yml)
