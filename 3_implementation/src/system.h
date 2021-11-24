@@ -36,7 +36,7 @@ float interest(float t,float amount,int rate)
 void fordelay(int j)
 {   int i,k;
     for(i=0;i<j;i++)
-         k=i;
+         k=k+i;
 }
 
 void new_acc()
