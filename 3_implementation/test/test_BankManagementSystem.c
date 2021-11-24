@@ -532,23 +532,23 @@ void menu(void)
 int main()
 {
     char pass[10],password[10]="pass";
-    int i=0;
+    int log=0;
     printf("\n\n\n\t\t\t\t   Bank Management System\n\t\t\t\t\t User Login ");
     printf("\n\n\n\n\n\t\t\t\tEnter the password to login:");
     scanf("%s",pass);
     /*do
     {
-    //if (pass[i]!=13&&pass[i]!=8)
+    //if (pass[log]!=13&&pass[log]!=8)
         {
             printf("*");
-            pass[i]=getch();
+            pass[log]=getch();
             i++;
         }
-    }while (pass[i]!=13);
+    }while (pass[log]!=13);
     pass[10]='\0';*/
     if (strcmp(pass,password)==0)
         {printf("\n\nPassword Match!\nLOADING");
-        for(i=0;i<=6;i++)
+        for(log=0;log<=6;log++)
         {
             fordelay(100000000);
             printf(". ");
