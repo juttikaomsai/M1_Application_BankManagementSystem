@@ -6,7 +6,7 @@ ifdef OS
    FixPath = $(subst /,\,$1)
    EXEC = exe
 else
-   ifeq ($(shell uname), Linux)
+   ifeq ($(shell uname), Windows)
       RM = rm -rf
       FixPath = $1
 	  EXEC = out
