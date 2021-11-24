@@ -528,3 +528,4 @@ void menu(void)
         break;
     }
 }
+#endif
