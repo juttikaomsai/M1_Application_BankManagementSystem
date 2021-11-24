@@ -15,3 +15,5 @@ BANK MANAGEMENT SYSTEM undertaken as a project is based on relevant technologies
 ![Code-Grade](https://api.codiga.io/project/29895/status/svg)
 
 [![CI](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/build-linux.yml/badge.svg)](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/build-linux.yml)
+
+[![Unit testing](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/Unittest.yml/badge.svg)](https://github.com/juttikaomsai/M1_Application_BankManagementSystem/actions/workflows/Unittest.yml)
