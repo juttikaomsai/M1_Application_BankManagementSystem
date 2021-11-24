@@ -5,11 +5,11 @@ void menu();
 int main_exit;
 int main()
 {
-    char pass[10],password[10]="pass";
+    char pass[10], password[10]="pass";
     int i=0;
     printf("\n\n\n\t\t\t\t   Bank Management System\n\t\t\t\t\t User Login ");
     printf("\n\n\n\n\n\t\t\t\tEnter the password to login:");
-    scanf("%s",pass);
+    scanf("%s",&pass);
     /*do
     {
     //if (pass[i]!=13&&pass[i]!=8)
