@@ -18,10 +18,10 @@ All the banking applications based on the building of customers account, deletin
 
 ## Cost and Features and Timeline
 ![State of Art](https://www.sciencedirect.com/topics/computer-science/application-cost)
-* cost:
+*  cost:
   application cost highly depends on the strategy of storing the large generated data sets due to the pay-as-you-go model. A good strategy is to find a balance to selectively store some popular data sets and regenerate the rest when needed, i.e. finding a trade-off between computation and storage. However, the generated application data sets in the cloud often have dependencies; that is, a computation task can operate on one or more data set(s) and generate new one(s). The decision about whether to store or delete an application data set impacts not only the cost of the data set itself but also that of other data sets in the cloud. To achieve the best trade-off and utilise it to reduce the application cost
 
-* Features:
+*  Features:
   -Major of banks have not create their bank application for customers usage, in this cresis, we are creating an application by attaching additional features and adding of all banks in this application to create their accounts through this for customer needs.
    -From this application, we can select any bank which is colaborate with this application and able to create an account in that particular bank. And customer can able to modify account, delete account, make a transaction over that account etc.,
  - Many of us lead busy lives, Some of us are up before the crack of dawn, getting ourselves
@@ -31,12 +31,12 @@ day. After a hectic day, the last thing you want to do is spend time waiting in 
 or even the post office. That's where Online Banking comes in. Many of the benefits of doing
 our banking online are obvious:
 ```sh
-* You don't have to wait in line.
-* You don't have to plan your day around the bank's hours.
-* You can create any bank account through this.
-* You can look at your balance whenever you want, not just when you get a statement.
+*  You don't have to wait in line.
+*  You don't have to plan your day around the bank's hours.
+*  You can create any bank account through this.
+*  You can look at your balance whenever you want, not just when you get a statement.
 ```
-* There are some hidden benefits too. As a young bank customer, you're just learning how to
+*  There are some hidden benefits too. As a young bank customer, you're just learning how to
 manage your money and observe your spending patterns.
  Online banking allows you to watch your money on a daily basis if you want to. By
 keeping close tabs on your funds, you'll always be aware of what's happening in your
